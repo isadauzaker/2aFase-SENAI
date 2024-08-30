@@ -1,3 +1,14 @@
 .Cabecalho-container{
-    background-color: rgb(199, 162, 235);
+    background-color: var(--cor-5);
+    color: var(--cor-1);
 }
+body{
+    background-color: var(--cor-1);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+    width: 500px;
+
+}
+
