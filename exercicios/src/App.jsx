@@ -4,6 +4,7 @@ import Media from './components/Media'
 import CopoMeioCheio from './components/CopoMeioCheio'
 import DoisCoposMeioCheios from './components/DoisCoposMeioCheios'
 import LinhaDeCredito from './components/LinhaDeCredito'
+import StarUbers from './components/StarUbers'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
      <CopoMeioCheio />
      <DoisCoposMeioCheios />
      <LinhaDeCredito />
+     <StarUbers />
 
     </>
   )
