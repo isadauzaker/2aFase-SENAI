@@ -15,7 +15,7 @@ function Media() {
         <h2>Exercício para calcular a média de 2 números</h2>
         <button onClick={calcularMedia}>Calcular</button>
 
-     Média: {resultado}
+     {resultado}
     </div>
   )
 }

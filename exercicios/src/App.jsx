@@ -10,9 +10,8 @@ function App() {
  
   return (
     <>
-    
-     <Media />
      <Exemplo />
+     <Media />
      <CopoMeioCheio />
      <DoisCoposMeioCheios />
      <LinhaDeCredito />

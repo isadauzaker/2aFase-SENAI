@@ -28,7 +28,7 @@ function LinhaDeCredito() {
     }
   return (
     <div className='LinhaDeCredito-container'>
-      <h1> Linha de Crédito para os funcionários.</h1>
+      <h2> Linha de Crédito para os funcionários.</h2>
       <button onClick={processarValor}>Processar Valor</button>
       {resultado}
     </div>
