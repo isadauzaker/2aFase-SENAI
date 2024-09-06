@@ -1,9 +1,10 @@
-import React from 'react'
-import './PositivoNegativo.css'
-import { useState } from 'react'
-
 // 5.29 - Copo meio cheio: Ler um número e informar se ele é positivo, 
 // negativo ou nulo.
+
+import React from 'react'
+import './CopoMeioCheio.css'
+import { useState } from 'react'
+
 
 function PositivoNegativo() {
     const [resultado, setResultado] = useState()
@@ -20,10 +21,11 @@ function PositivoNegativo() {
         else{
             setResultado('Nulo')
         }
+        setResultado(inform)
     }
 
   return (
-    <div className='PositivoNegativo-container'>
+    <div className='CopoMeioCheio-container'>
       <h2>Exercício para informar se o número é positivo, negativo ou nulo.</h2>
       <button onClick={processarNumero}>Processar</button>
      {resultado}
