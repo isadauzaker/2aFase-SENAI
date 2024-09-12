@@ -1,0 +1,22 @@
+*{
+    background-color: rgb(243, 236, 236);
+}
+button{
+    background-color: rgb(194, 168, 218);
+    color: white; 
+    padding: 6px 10px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #9b74c0;
+}
+h1{
+    color:rgb(173, 136, 207) ;
+}
+h2{
+    color: rgb(70, 70, 70);
+}
