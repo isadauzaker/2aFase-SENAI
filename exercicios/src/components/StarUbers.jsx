@@ -27,7 +27,30 @@ function StarUbers() {
         let tempo = distancia / velocidadeDaLuz
         setResultado(tempo)
 
-        
+        if(tempo > 315360000) {
+          let anos = tempo / 315360000
+          setResultado(anos)
+        }
+        else if( tempo > 2592000){
+          let meses = tempo / 2592000
+          setResultado(meses)
+        }
+        else if(tempo > 86400){
+          let dias = tempo / 86400
+          setResultado(dias)
+        }
+        else if(tempo > 36000){
+          let horas = tempo / 36000
+          setResultado(horas)
+        }
+        else if(tempo > 60){
+          let minutos = tempo / 60
+          setResultado(minutos)
+        }
+        else{
+          setResultado(segundos)
+        }
+         
     }
   return (
     <div className='StarUbers-container'>
