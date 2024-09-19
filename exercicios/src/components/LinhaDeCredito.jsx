@@ -4,12 +4,12 @@
 // empréstimo e o número de prestações e informe se o empréstimo pode ser 
 // concedido. Nenhum dos valores informados pode ser zero ou negativo.
 
-import React from 'react'
 import './LinhaDeCredito.css'
 import { useState } from 'react'
+import RelatorioEmprestimo from './RelatorioEmprestimo'
 
 function LinhaDeCredito() {
-    const [resultado, setResultado] = useState()
+  const [stateRelatorio, setStateRelatorio] = useState()
     function processarValor(){
 
         let salarioUsuario = Number(prompt('Digite o valor do seu sálario: '))
@@ -17,20 +17,34 @@ function LinhaDeCredito() {
         let numeroPrestacoes = Number(prompt('Digite o número de prestações: '))
 
         let valorPrestacao = valorEmprestimo / numeroPrestacoes
-        let valorLimitePrestacao = salarioUsuario * 0.30
+        let valorMaximoPrestacao = salarioUsuario * 0.30
 
-        if(valorPrestacao <= valorLimitePrestacao){
-            setResultado('O empréstimo pode ser feito! ')
-        }else{
-            setResultado('O emprestimo não pode ser efetuado :(')
+        if(valorPrestacao <= valorMaximoPrestacao){
+            // setResultado('O empréstimo pode ser feito! ')
+            let infosRelatorio = {
+              situacao: "aprovado",
+              maxPrestacao: valorMaximoPrestacao,
+              prestacao: valorPrestacao,
+              emprestimo: valorEmprestimo,
+              prestacoes: numeroPrestacoes
+            }
+            setStateRelatorio(infosRelatorio)
+        }else infosRelatorio = {
+          situacao: "reprovado",
+              maxPrestacao: valorMaximoPrestacao,
+              prestacao: valorPrestacao,
+              emprestimo: valorEmprestimo,
+              prestacoes: numeroPrestacoes
+            // setResultado('O emprestimo não pode ser efetuado :(')
+
         }
-        setResultado(inform)
+        setStateRelatorio(infosRelatorio)
     }
   return (
     <div className='LinhaDeCredito-container'>
       <h2> Linha de Crédito para os funcionários.</h2>
       <button onClick={processarValor}>Processar Valor</button>
-      {resultado}
+      {stateRelatorio &&   <RelatorioEmprestimo infos={ stateRelatorio } /> }
     </div>
   )
 }
