@@ -8,6 +8,7 @@ function Navbar() {
         <Link to="/generica">Genérica</Link>
         <Link to="/final">Final</Link>
         <Link to="/numeros712">ex7.12</Link>
+        <Link to="/numeros713">ex7.13</Link>
     </nav>
   )
 }
